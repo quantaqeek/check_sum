@@ -79,7 +79,7 @@ function Intro() {
                 >
                   <div className=" w-full flex items-center justify-center md:items-start p-6 flex-col gap-8">
                     <p>{achievement.title}</p>
-                    <div className="flex flex-col md:flex-row items-center gap-2  font-thin text-6xl sm:text-8xl md:text-9xl">
+                    <div className="flex flex-col-reverse md:flex-row items-center gap-2  font-thin text-6xl sm:text-8xl md:text-9xl">
                       <span>{achievement.scale}</span>
                       {achievement.icon}
                     </div>
@@ -92,7 +92,7 @@ function Intro() {
 
         <div className="w-full min-h-screen">
           <div className="w-full flex flex-col">
-            <div className="w-full flex items-center justify-center p-12">
+            <div className="w-full flex items-center justify-center px-4 py-12 sm:px-6 md:px-12">
               <h2 className="text-5xl sm:text-7xl md:text-8xl text-stone-500 dark:text-primary-dark">
                 What I Do Best
               </h2>
