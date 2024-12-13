@@ -5,7 +5,7 @@ const Experience = () => {
   return (
     <section className="w-full min-h-screen ">
       <div className="w-full flex flex-col justify-center items-center relative p-6">
-        <article className="w-full absolute items-center justify-center top-0 flex text-center overflow-hidden">
+        <article className="w-full absolute items-center mt-16 justify-center top-0 flex text-center overflow-hidden">
           <h1 className="text-7xl sm:text-8xl md:text-9xl text-tertiary-dark font-bold">
             ABOUT ME
           </h1>
