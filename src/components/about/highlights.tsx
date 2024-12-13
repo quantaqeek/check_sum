@@ -56,7 +56,7 @@ const Highlights = () => {
                 Passion
               </h2>
               <p className="font-nanumMyeongjo">
-              I am a dreamer who once held tightly to the mantra, &quot;Hard work pays&quot;. But in today's world, success demands more than just effort—it calls for 
+              I am a dreamer who once held tightly to the mantra, &quot;Hard work pays&quot;. But in today&apos;s world, success demands more than just effort—it calls for 
                 <span className="font-bold text-BrandQuaternary-light dark:text-BrandPrimary-light">
                   {" "}
                   innovation, resilience, and bold action.

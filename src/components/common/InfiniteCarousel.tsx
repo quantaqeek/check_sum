@@ -1,4 +1,5 @@
 import { Stacks } from '@/app/data'
+import Image from 'next/image'
 import React from 'react'
 
 const InfiniteCarousel = () => {
@@ -22,7 +23,7 @@ const InfiniteCarousel = () => {
                         Stacks.map((stack, index)=> {
                             return (
                                 <li key={index}>
-                                <img src={stack.img} className='w-24 grayscale' alt="Disney" />
+                                <Image src={stack.img} width={100} height={100} style={{width:"auto", height:"auto"}} className='w-24 grayscale' alt="Disney" />
                             </li>
                             )
                         })

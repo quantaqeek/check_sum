@@ -1,7 +1,7 @@
 "use client";
 
 import { useState,} from "react";
-import { motion, AnimatePresence, useInView } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { IoCloseOutline } from "react-icons/io5";
