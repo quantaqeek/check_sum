@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .clip-customShape {
+    clip-path: polygon(10% 0, 100% 0, 80% 100%, 15% 75%, 0 100%);
+  }
+
+  .clip-customFooter {
+    clip-path: polygon(0 45%, 50% 0, 100% 15%, 100% 100%, 0 100%);
+  }
+  .clip-customFooter2 {
+    clip-path: polygon(0 45%, 50% 0, 100% 15%, 100% 100%, 0 100%);
+  }
+}
+
+.bg-pencil-circle {
+  background-image: url('/globe.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.marker1 {
+  background-image: url('/assets/markers/marker1.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+.marker2 {
+  background-image: url('/assets/markers/marker9.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.marker3 {
+  background-image: url('/assets/markers/marker3.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
