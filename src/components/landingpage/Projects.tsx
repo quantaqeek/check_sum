@@ -82,18 +82,18 @@ const Projects = () => {
           Selected Projects
         </h2>
       </div>
-      <div className="w-full h-full grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-0 lg:h-[800px] overflow-clip">
+      <div className="w-full grid grid-cols-1  md:grid-cols-3 gap-0 md:h-[800px] overflow-clip">
         {images.map((image, index) => (
           <div
             key={image.id}
-            className={`project-detail relative cursor-pointer ${image.span} overflow-hidden`}
+            className={`project-detail w-full h-96 md:h-auto relative cursor-pointer ${image.span} overflow-hidden`}
             onMouseEnter={() => handleMouseEnter(index)} // Handle hover for desktop
             onMouseLeave={handleMouseLeave} // Handle mouse leave for desktop
             onTouchStart={() => handleTouchStart(index)} // Handle touch start for mobile
             onTouchEnd={handleTouchEnd} // Handle touch end for mobile
           >
             {/* Image */}
-            <div className="aspect-square md:aspect-video relative">
+            <div className="w-full h-full relative">
               <Image
                 src={image.src}
                 alt={`Project ${image.id}`}
