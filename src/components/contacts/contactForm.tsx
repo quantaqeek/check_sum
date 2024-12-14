@@ -47,7 +47,7 @@ const ContactForm = () => {
       </div>
       <div className="flex p-2 sm:p-4 md:p-6  flex-col justify-center items-center min-h-screen w-full relative">
         <div className="flex flex-col w-full relative justify-center items-center md:justify-between gap-8">
-          <div className="flex flex-col w-full items-center justify-center gap-4  text-BrandMain-light">
+          <div className="flex flex-col w-full items-center justify-center text-center gap-4  text-BrandMain-light">
             <h2 className="text-4xl font-semibold font-edu text-secondary-dark dark:text-secondary-light">Grab a <span className="text-BrandQuaternary-light dark:text-BrandMain-light">coffee </span> and let&apos;s chat</h2>
             <GiCoffeeCup size={64}/>
           </div>
