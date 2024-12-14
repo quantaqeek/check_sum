@@ -78,12 +78,12 @@ export default function Navbar() {
                 />
               </div>
               <div className="nav-details relative inset-0 w-full flex flex-col min-h-screen  ">
-                <div className="w-full flex flex-col gap-2 items-end px-2 sm:px-4 mr-4">
+                <div className="w-full flex flex-col gap-2 items-end px-2 sm:px-4 mr-4 mt-6">
                   {menuItems.map((item) => (
                     <Link key={item.label} href={item.href}>
                       <span
                         onClick={toggleMenu}
-                        className={`text-3xl sm:text-5xl md:text-6xl font-semibold font-anton ${
+                        className={`text-5xl sm:text-6xl md:text-6xl font-semibold font-anton ${
                           pathName === item.href
                             ? "text-BrandMain-light"
                             : "text-TextMain-dark hover:underline"
@@ -97,8 +97,8 @@ export default function Navbar() {
                     <ThemeToggle />
                   </div>
                 </div>
-                <ul className="w-full  md:max-w-[50%]  p-2 md:p-4 flex text-normal sm:text-xl md:text-5xl flex-row gap-2 md:gap-4  justify-center sm:justify-around text-BrandMain-light">
-                  <li className="flex flex-col items-center justify-between cursor-pointer">
+                <ul className="w-full absolute py-4 sm:relative bottom-0 md:max-w-[50%]  p-2 md:p-4 flex text-normal sm:text-xl md:text-5xl flex-row gap-2 md:gap-4  justify-center sm:justify-around text-BrandMain-light">
+                  <li className="flex flex-col  items-center justify-between cursor-pointer">
                     <Link
                       href={"mailto:quantumqeek@gmail.com?subject=Hello%20there&body=I%20wanted%20to%20reach%20out!"}
                       target="_blank"
@@ -124,7 +124,7 @@ export default function Navbar() {
                       <BsTwitterX size={48} />
                     </Link>
                   </li>
-                  <li className="flex flex-col items-center justify-between cursor-pointer">
+                  <li className="flex flex-col  items-center justify-between cursor-pointer">
                     <Link
                       href={"https://x.com/bettenoch_254"}
                       target="_blank"
