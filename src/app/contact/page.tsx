@@ -5,10 +5,10 @@ import React from "react";
 
 const Contacts = () => {
   return (
-<div className="flex flex-col w-full">
-  <ContactsHero/>
-<ContactForm/>
-</div>
+    <div className="flex flex-col w-full">
+      <ContactsHero />
+      <ContactForm />
+    </div>
   );
 };
 
