@@ -6,7 +6,7 @@ import { SiLinkedin } from "react-icons/si";
 const Footer = () => {
   return (
     <footer className="w-full flex items-center justify-center ">
-      <div className=" min-h-screen w-full flex flex-col  relative items-center justify-start clip-customFooter text-primary-light dark:text-primary-dark bg-background-dark dark:bg-background-light">
+      <div className="w-full flex flex-col  relative items-center justify-start clip-customFooter text-primary-light dark:text-primary-dark bg-background-dark dark:bg-background-light">
         <div className="flex mb-4 w-full relative  px-6 items-center mt-24 justify-center md:justify-end lg:justify-center gap-6">
           <div className="flex items-center justify-center gap-8 flex-col md:flex-row">
             <ul className=" flex flex-col gap-2 text-xl font-nanumMyeongjo border-r-2">
