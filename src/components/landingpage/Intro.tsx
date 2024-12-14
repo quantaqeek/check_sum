@@ -66,11 +66,11 @@ function Intro() {
 
         <div className="w-full flex flex-col my-16 ">
           <div className="font-nanumMyeongjo">
-            <ul className=" grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+            <ul className= {`grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3`}>
               {achievements.map((achievement, index) => (
                 <li
                   key={achievement.id}
-                  className={`flex rounded-lg ${
+                  className={`flex rounded-lg ${index === 2 ? 'sm:col-span-2 md:col-auto':''} ${
                     index === 0
                       ? "text-background-light"
                       : "text-background-dark"
@@ -109,13 +109,13 @@ function Intro() {
                       index === 1 ? "md:flex-row-reverse" : "md:flex-row"
                     } border-solid border-t-[1px] border-tertiary-dark`}
                   >
-                    <div className={`flex font-roboto font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl transition-all ease-in-out ${isHovered? "text-tertiary-dark dark:text-BrandQuaternary-dark":""}`}>
+                    <div className={`flex font-roboto font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl transition-all ease-in-out  ${isHovered? "text-tertiary-dark dark:text-BrandQuaternary-dark":""}`}>
                       <h4>{service.name}</h4>
                     </div>
-                    <div className={`flex flex-col gap-6 items-center md:items-start max-w-full sm:max-w-96 ${isHovered?  "text-[#808000] font-bold dark:text-lime-200": ""}`}>
+                    <div className={`flex flex-col gap-6 items-center md:items-start max-w-full sm:max-w-96 text-[#808000] dark:text-lime-200 md:text-primary-dark dark:md:text-primary-light font-bold md:font- ${isHovered?  "text-[#808000] font-bold dark:text-lime-200": ""}`}>
                       {service.icon}
 
-                      <p className={`font-thin text-sm ${isHovered?  "text-[#808000] font-bold text-md transition-all ease-in-out dark:text-lime-200": ""}`}>{service.notes}</p>
+                      <p className={` text-sm text-[#808000] dark:text-lime-200 md:text-primary-dark dark:md:text-primary-light font-bold md:font-thin   ${isHovered?  "text-[#808000] font-bold text-md transition-all ease-in-out dark:text-lime-200": ""}`}>{service.notes}</p>
                     </div>
                   </li>
                 );
