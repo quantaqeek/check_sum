@@ -266,12 +266,12 @@ export const Stacks = [
   {
     id: 7,
     name: "Php",
-    img: "/images/stacks/php.svg"
+    img: "/images/stacks/php.png"
   },
   {
     id: 8,
     name: "Ruby",
-    img: "/images/stacks/ruby.svg"
+    img: "/images/stacks/ruby.png"
   },
   {
     id: 9,
