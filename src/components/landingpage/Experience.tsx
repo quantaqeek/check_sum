@@ -5,12 +5,12 @@ const Experience = () => {
   return (
     <section className="w-full min-h-screen ">
       <div className="w-full flex flex-col justify-center items-center relative p-6">
-        <article className="w-full absolute items-center mt-16 justify-center top-0 flex text-center overflow-hidden">
+        <article className="w-full  items-center mt-16  justify-center flex text-center overflow-hidden">
           <h1 className="text-7xl sm:text-8xl md:text-9xl text-tertiary-dark font-bold">
             ABOUT ME
           </h1>
         </article>
-        <div className="w-full relative mt-48 flex flex-col gap-16 md:gap-2 justify-center items-center">
+        <div className="w-full relative mt-12 flex flex-col gap-16 md:gap-2 justify-center items-center">
           <div className="w-full flex flex-col md:flex-row justify-around items-center">
             <div className="w-full mr-0 md:mr-8 lg:mr-12 max-w-full md:max-w-xl items-center justify-center border-solid border-b-[2px] md:border-r-[3px] md:border-b-[0]">
               <div className="flex flex-col gap-8 mb-16 w-full mr-0 md:mr-4 lg:mr-32">
