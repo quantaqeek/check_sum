@@ -41,13 +41,12 @@ export default function Hero() {
           sizes="100%"
           style={{ objectFit: "cover" }}
           className="block dark:hidden"
-         
           quality={85}
         />
       </div>
 
       <div className="absolute inset-0 bg-transparent dark:bg-black/10" />
-      <div className="relative w-full p-8 mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div className="relative overflow-hidden w-full p-8 mx-auto flex flex-col md:flex-row items-center justify-between">
         <ul ref={ref} className="flex flex-col gap-4 mt-12">
           <motion.li
             variants={slideInFromLeftVariant}
@@ -115,20 +114,22 @@ export default function Hero() {
         </ul>
 
         <div className="mt-12 flex flex-col gap-8 max-w-full md:max-w-[30%]">
-          <ul className="text-xl font-thin border-solid border-t-2 border-b-2 border-TextTertiary-dark">
-            <li className="items-center flex">
-              <LuBadgeCheck />
-              <p>Website Design</p>
-            </li>
-            <li className="items-center flex">
-              <LuBadgeCheck />
-              <p>Product Design</p>
-            </li>
-            <li className="items-center flex">
-              <LuBadgeCheck />
-              <p>Branding & Strategy</p>
-            </li>
-          </ul>
+          <div className="w-full font-thin flex flex-col items-center md:items-start border-solid border-t-2 border-b-2 border-TextTertiary-dark">
+            <ul className="text-xl font-thin py-4">
+              <li className="items-start flex">
+                <LuBadgeCheck />
+                <p>Website Design</p>
+              </li>
+              <li className="items-start flex">
+                <LuBadgeCheck />
+                <p>Product Design</p>
+              </li>
+              <li className="items-start flex">
+                <LuBadgeCheck />
+                <p>Branding & Strategy</p>
+              </li>
+            </ul>
+          </div>
 
           <div className="w-full flex flex-col gap-8">
             <Link href={"/contact"}>
@@ -152,20 +153,22 @@ export default function Hero() {
                 </svg>
               </div>
             </Link>
-            <ul className="cursor-pointer list-disc text-md font-thin border-solid border-t-2 border-b-2 border-TextTertiary-dark">
-              <li className="text-tertiary-dark items-center flex hover:text-BrandSecondary-dark dark:text-BrandFancy-light">
-                <TiTickOutline />
-                <p>Marketing & Sales</p>
-              </li>
-              <li className="text-tertiary-dark items-center flex hover:text-BrandSecondary-dark dark:text-BrandFancy-light">
-                <TiTickOutline />
-                <p>Geo Location Mapping</p>
-              </li>
-              <li className="text-tertiary-dark items-center flex hover:text-BrandSecondary-dark dark:text-BrandFancy-light">
-                <TiTickOutline />
-                <p>Photography</p>
-              </li>
-            </ul>
+            <div className=" w-full flex flex-col items-center md:items-start border-solid border-t-2 border-b-2 border-TextTertiary-dark">
+              <ul className="cursor-pointer list-disc text-md font-thin ">
+                <li className="text-tertiary-dark items-center flex hover:text-BrandSecondary-dark dark:text-BrandFancy-light">
+                  <TiTickOutline />
+                  <p>Marketing & Sales</p>
+                </li>
+                <li className="text-tertiary-dark items-center flex hover:text-BrandSecondary-dark dark:text-BrandFancy-light">
+                  <TiTickOutline />
+                  <p>Geo Location Mapping</p>
+                </li>
+                <li className="text-tertiary-dark items-center flex hover:text-BrandSecondary-dark dark:text-BrandFancy-light">
+                  <TiTickOutline />
+                  <p>Photography</p>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="w-full flex flex-col">
             <article className="font-edu text-md">
