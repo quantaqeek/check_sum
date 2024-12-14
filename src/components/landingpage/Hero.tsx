@@ -1,18 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { motion, AnimatePresence,  } from "framer-motion";
-import { useState, useEffect, } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import { LuBadgeCheck } from "react-icons/lu";
 import { TiTickOutline } from "react-icons/ti";
 import Link from "next/link";
-
+import { horizonUp, slideInFromLeftVariant } from "@/app/animations/variants";
 
 const services = ["WEB3", "MLOPS", "AI", "GIS", "MOBILEDEV"];
 
 export default function Hero() {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentServiceIndex((prevIndex) => (prevIndex + 1) % services.length);
@@ -47,39 +48,54 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-transparent dark:bg-black/10" />
       <div className="relative w-full p-8 mx-auto flex flex-col md:flex-row items-center justify-between">
-        <ul className="flex flex-col gap-4 mt-12">
-          <li
-          
+        <ul ref={ref} className="flex flex-col gap-4 mt-12">
+          <motion.li
+            variants={slideInFromLeftVariant}
+            custom={0}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
             className="font-anton text-[20px] text-TextTertiary-dark"
           >
             <strong>Welcome</strong>
-          </li>
+          </motion.li>
           <li>
             <ul className="flex flex-col">
-              <li
-              
+              <motion.li
+                variants={horizonUp}
+                custom={0}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
                 className="text-TextTertiary-dark text-[12px]"
               >
                 <p>Hi There!, This is</p>
-              </li>
-              <li
-               
+              </motion.li>
+              <motion.li
+                variants={horizonUp}
+                custom={1}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
                 className="font-edu text-3xl mb-6"
               >
                 <strong>
                   Bett k. <span>Enoch</span>
                 </strong>
-              </li>
-              <li
-          
+              </motion.li>
+              <motion.li
+                variants={horizonUp}
+                custom={2}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
                 className="flex flex-col font-anton text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold"
               >
                 <h1>I DESIGN</h1>
                 <h2>FOR BUSINESS</h2>
-              </li>
+              </motion.li>
 
-              <li
-    
+              <motion.li
+                variants={horizonUp}
+                custom={3}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
                 className="service-text text-BrandMain-dark dark:text-BrandMain-light text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold overflow-hidden"
               >
                 <AnimatePresence mode="wait">
@@ -93,7 +109,7 @@ export default function Hero() {
                     {services[currentServiceIndex]}
                   </motion.div>
                 </AnimatePresence>
-              </li>
+              </motion.li>
             </ul>
           </li>
         </ul>
