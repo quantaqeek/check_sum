@@ -7,7 +7,7 @@ const Showcase = () => {
   return (
     <section className="w-full min-h-screen">
       <div className="w-full flex flex-col px-6 bg-BrandQuaternary-light dark:bg-BrandQuaternary-dark">
-        <div className="w-full flex flex-col md:flex-row items-center justify-between">
+        <div className="w-full flex flex-col gap-6 md:flex-row items-center justify-between">
           <div className="flex flex-col text-background-dark items-start gap-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ const Showcase = () => {
           </div>
         </div>
         <div className="w-full flex items-center justify-center relative  grayscale">
-          <div className="flex w-[90%] relative min-h-64  rounded-t-[5em] items-center justify-center">
+          <div className="flex w-[100%]  md:w-[90%] relative min-h-64  rounded-t-[5em] items-center justify-center">
             <div className="absolute z-10 top-0 right-0 text-7xl  bg-stone-50 dark:bg-stone-800 text-stone-800 dark:text-stone-200 rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
