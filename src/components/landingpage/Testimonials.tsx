@@ -116,7 +116,7 @@ const Card = ({
         <motion.div
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
-          className={`hover:cursor-grab p-6 md:p-2 active:cursor-grabbing relative origin-bottom ${
+          className={`hover:cursor-grab p-6 md:p-2 active:cursor-grabbing max-h-96 relative origin-bottom ${
             isFront ? "grayscale-0" : "grayscale"
           }`}
           style={{
@@ -138,7 +138,7 @@ const Card = ({
             src={url}
             alt="testimonial"
             width={350}
-            height={350}
+            height={300}
             style={{width: "auto", height: "auto"}}
             className="rounded-lg"
           />
