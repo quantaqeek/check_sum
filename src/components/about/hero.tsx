@@ -35,14 +35,14 @@ const AboutHero = () => {
       </div>
       <div
         ref={ref}
-        className="relative w-full mt-16 p-6 md:p-8 mx-auto flex flex-col-reverse md:flex-row items-center justify-between"
+        className="relative w-full overflow-hidden mt-16 p-6 md:p-8 mx-auto flex flex-col-reverse md:flex-row items-center justify-between"
       >
         <motion.div
           variants={slideInFromLeftVariant}
           custom={0}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="flex flex-col items-start justify-center max-w-full md:max-w-[40%]"
+          className="flex flex-col items-start mt-32 justify-center max-w-full md:max-w-[40%]"
         >
           <p className="text-3xl sm:text-5xl font-extrabold font-roboto dark:text-primary-light">
             From <span className="text-TextTertiary-dark">Web Solutions</span>{" "}
