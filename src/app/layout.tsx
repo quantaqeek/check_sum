@@ -6,6 +6,7 @@ import {
   FontEdu,
   FontNanumMyeongjo,
   FontRoboto,
+  FontMomo,
 } from "./utils/CustomFonts";
 import Navbar from "@/components/common/navbar";
 import { ThemeProvider } from "next-themes";
@@ -24,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-       className={`${FontRoboto.variable} ${FontNanumMyeongjo.variable} ${FontAnton.variable} ${FontEdu.variable} bg-background-light dark:bg-background-dark text-primary-dark dark:text-primary-light antialiased`}
+       className={`${FontRoboto.variable} ${FontNanumMyeongjo.variable} ${FontAnton.variable} ${FontEdu.variable} ${FontMomo.variable} bg-background-light dark:bg-background-dark text-primary-dark dark:text-primary-light antialiased`}
       >
        <ThemeProvider attribute="class" defaultTheme="dark">
           <div className="min-h-screen flex flex-col w-full font-roboto">
