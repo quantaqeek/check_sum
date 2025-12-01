@@ -1,4 +1,4 @@
-import FadingLineTitle from "../common/FadingLineTitle";
+// import FadingLineTitle from "../common/FadingLineTitle";
 import BlogPage from "./BlogPage";
 
 export default function BlogIntro() {
