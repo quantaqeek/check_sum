@@ -43,3 +43,148 @@ body {
   background-position: bottom;
   background-size: contain;
 }
+
+
+/* Add this to your globals.css file */
+
+/* Base table styling for MDX */
+.prose table {
+  width: 100%;
+  font-size: 0.875rem;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+/* Table wrapper for overflow handling */
+.prose .table-wrapper {
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+.dark .prose .table-wrapper {
+  border-color: #374151;
+}
+
+/* Table header styling */
+.prose thead {
+  background: linear-gradient(to right, #eff6ff, #e0e7ff);
+}
+
+.dark .prose thead {
+  background: linear-gradient(to right, #1f2937, #374151);
+}
+
+.prose thead th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #374151;
+  border-bottom: 2px solid #d1d5db;
+}
+
+.dark .prose thead th {
+  color: #e5e7eb;
+  border-bottom-color: #4b5563;
+}
+
+/* Table body styling */
+.prose tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 150ms ease-in-out;
+}
+
+.dark .prose tbody tr {
+  border-bottom-color: #374151;
+}
+
+/* Hover effect */
+.prose tbody tr:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.dark .prose tbody tr:hover {
+  background-color: rgba(55, 65, 81, 0.5);
+}
+
+/* Striped rows */
+.prose tbody tr:nth-child(odd) {
+  background-color: rgba(249, 250, 251, 0.3);
+}
+
+.dark .prose tbody tr:nth-child(odd) {
+  background-color: rgba(17, 24, 39, 0.3);
+}
+
+/* Table cells */
+.prose tbody td {
+  padding: 1rem 1.5rem;
+  color: #374151;
+}
+
+.dark .prose tbody td {
+  color: #d1d5db;
+}
+
+/* First column (usually names/labels) gets bold styling */
+.prose tbody td:first-child {
+  font-weight: 600;
+  color: #111827;
+}
+
+.dark .prose tbody td:first-child {
+  color: #f9fafb;
+}
+
+/* Remove border from last row */
+.prose tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 640px) {
+  .prose table {
+    font-size: 0.75rem;
+  }
+  
+  .prose thead th,
+  .prose tbody td {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Optional: Add scrollbar styling for overflow tables */
+.prose .table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.prose .table-wrapper::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.dark .prose .table-wrapper::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.prose .table-wrapper::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 4px;
+}
+
+.dark .prose .table-wrapper::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.prose .table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.dark .prose .table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
