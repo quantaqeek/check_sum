@@ -3,15 +3,13 @@ import React from 'react';
 interface StyledTableProps {
   children: React.ReactNode;
   caption?: string;
-  hover?: boolean;
-  striped?: boolean;
+
 }
 
 export function StyledTable({ 
   children, 
   caption, 
-  hover = true, 
-  striped = true 
+
 }: StyledTableProps) {
   return (
     <div className="my-8 overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">

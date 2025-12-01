@@ -31,12 +31,12 @@ const BlogGrid: React.FC<BlogGridProps> = ({ blogs }) => {
     return categoryStyles[category];
   };
 
-  const getAccentLine = (id: number) => {
-    const isLeft = id % 2 === 0;
-    return isLeft 
-      ? "before:absolute before:left-0 before:top-4 before:bottom-4 before:w-0.5 before:bg-gradient-to-b before:from-blue-400 before:to-purple-400 before:rounded-full"
-      : "after:absolute after:right-0 after:top-4 after:bottom-4 after:w-0.5 after:bg-gradient-to-b after:from-green-400 after:to-emerald-400 after:rounded-full";
-  };
+  // const getAccentLine = (id: number) => {
+  //   const isLeft = id % 2 === 0;
+  //   return isLeft 
+  //     ? "before:absolute before:left-0 before:top-4 before:bottom-4 before:w-0.5 before:bg-gradient-to-b before:from-blue-400 before:to-purple-400 before:rounded-full"
+  //     : "after:absolute after:right-0 after:top-4 after:bottom-4 after:w-0.5 after:bg-gradient-to-b after:from-green-400 after:to-emerald-400 after:rounded-full";
+  // };
 
   const getCategoryColor = (category: PostList['category']) => {
     const colors = {
@@ -79,7 +79,7 @@ const BlogGrid: React.FC<BlogGridProps> = ({ blogs }) => {
       initial="hidden"
       animate="visible"
     >
-      {blogs.map((blog, index) => (
+      {blogs.map((blog) => (
 
         <motion.div
           key={blog.id}

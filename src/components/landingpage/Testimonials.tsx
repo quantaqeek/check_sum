@@ -25,7 +25,7 @@ const Testimonials = () => {
   return (
     <section className="w-full flex items-center ">
       <div className="w-full flex flex-col flex-1 relative mb-8 min-h-screen">
-        {cards.map((testimony, index) => (
+        {cards.map((testimony) => (
           <Card
             key={testimony.id}
             id={testimony.id}

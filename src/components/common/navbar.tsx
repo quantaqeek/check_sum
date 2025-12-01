@@ -23,7 +23,7 @@ export default function Navbar() {
 
   // Transform scrollY to background opacity (0 at top, 1 after scrolling 50px)
   const bgOpacity = useTransform(scrollY, [0, 100], [0, 1]);
-  const bgOpacityDark = useTransform(scrollY, [0, 100], [0, 0.95]);
+  // const bgOpacityDark = useTransform(scrollY, [0, 100], [0, 0.95]);
 
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
