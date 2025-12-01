@@ -25,7 +25,7 @@ const Testimonials = () => {
   return (
     <section className="w-full flex items-center ">
       <div className="w-full flex flex-col flex-1 relative mb-8 min-h-screen">
-        {cards.map((testimony) => (
+        {cards.map((testimony, index) => (
           <Card
             key={testimony.id}
             id={testimony.id}
@@ -116,7 +116,7 @@ const Card = ({
         <motion.div
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
-          className={`hover:cursor-grab p-6 md:p-2 active:cursor-grabbing max-h-96 relative origin-bottom ${
+          className={`hover:cursor-grab p-6 md:p-2 active:cursor-grabbing relative origin-bottom ${
             isFront ? "grayscale-0" : "grayscale"
           }`}
           style={{
@@ -138,7 +138,7 @@ const Card = ({
             src={url}
             alt="testimonial"
             width={350}
-            height={300}
+            height={350}
             style={{width: "auto", height: "auto"}}
             className="rounded-lg"
           />

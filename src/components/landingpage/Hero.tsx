@@ -41,13 +41,14 @@ export default function Hero() {
           sizes="100%"
           style={{ objectFit: "cover" }}
           className="block dark:hidden"
+         
           quality={85}
         />
       </div>
 
-      <div className="absolute inset-0 bg-transparent dark:bg-black/10" />
-      <div className="relative overflow-hidden w-full p-8 mx-auto flex flex-col md:flex-row items-center justify-between">
-        <ul ref={ref} className="flex flex-col gap-4 mt-12">
+      <div className="absolute inset-0 bg-transparent " />
+      <div className="relative w-full p-8 mx-auto flex flex-col md:flex-row items-center justify-between">
+        <ul ref={ref} className="flex flex-col gap-4 mt-12 relative">
           <motion.li
             variants={slideInFromLeftVariant}
             custom={0}
@@ -84,7 +85,7 @@ export default function Hero() {
                 custom={2}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
-                className="flex flex-col font-anton text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold"
+                className="flex flex-col font-anton text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold mt-64 md:mt-0"
               >
                 <h1>I DESIGN</h1>
                 <h2>FOR BUSINESS</h2>
@@ -111,25 +112,37 @@ export default function Hero() {
               </motion.li>
             </ul>
           </li>
+          <div className="absolute w-64 md:w-96 h-[500px] md:h-[600px] -z-10 md:-mr-24 flex flex-col items-center justify-end top-[20%] md:top-0  right-0">
+
+           <Image
+          src="/assets/profile/prof10.png"
+          alt="Hero Background Dark"
+          fill
+          sizes="100%"
+          style={{ objectFit: "cover" }}
+          className="hidden dark:block grayscale"
+          priority
+          quality={85}
+        />
+
+          </div>
         </ul>
 
         <div className="mt-12 flex flex-col gap-8 max-w-full md:max-w-[30%]">
-          <div className="w-full font-thin flex flex-col items-center md:items-start border-solid border-t-2 border-b-2 border-TextTertiary-dark">
-            <ul className="text-xl font-thin py-4">
-              <li className="items-start flex">
-                <LuBadgeCheck />
-                <p>Website Design</p>
-              </li>
-              <li className="items-start flex">
-                <LuBadgeCheck />
-                <p>Product Design</p>
-              </li>
-              <li className="items-start flex">
-                <LuBadgeCheck />
-                <p>Branding & Strategy</p>
-              </li>
-            </ul>
-          </div>
+          <ul className="text-xl font-thin border-solid border-t-2 border-b-2 border-TextTertiary-dark">
+            <li className="items-center flex">
+              <LuBadgeCheck />
+              <p>Website Design</p>
+            </li>
+            <li className="items-center flex">
+              <LuBadgeCheck />
+              <p>Product Design</p>
+            </li>
+            <li className="items-center flex">
+              <LuBadgeCheck />
+              <p>Branding & Strategy</p>
+            </li>
+          </ul>
 
           <div className="w-full flex flex-col gap-8">
             <Link href={"/contact"}>
@@ -153,22 +166,20 @@ export default function Hero() {
                 </svg>
               </div>
             </Link>
-            <div className=" w-full flex flex-col items-center md:items-start border-solid border-t-2 border-b-2 border-TextTertiary-dark">
-              <ul className="cursor-pointer list-disc text-md font-thin ">
-                <li className="text-tertiary-dark items-center flex hover:text-BrandSecondary-dark dark:text-BrandFancy-light">
-                  <TiTickOutline />
-                  <p>Marketing & Sales</p>
-                </li>
-                <li className="text-tertiary-dark items-center flex hover:text-BrandSecondary-dark dark:text-BrandFancy-light">
-                  <TiTickOutline />
-                  <p>Geo Location Mapping</p>
-                </li>
-                <li className="text-tertiary-dark items-center flex hover:text-BrandSecondary-dark dark:text-BrandFancy-light">
-                  <TiTickOutline />
-                  <p>Photography</p>
-                </li>
-              </ul>
-            </div>
+            <ul className="cursor-pointer list-disc text-md font-thin border-solid border-t-2 border-b-2 border-TextTertiary-dark">
+              <li className="text-tertiary-dark items-center flex hover:text-BrandSecondary-dark dark:text-BrandFancy-light">
+                <TiTickOutline />
+                <p>Marketing & Sales</p>
+              </li>
+              <li className="text-tertiary-dark items-center flex hover:text-BrandSecondary-dark dark:text-BrandFancy-light">
+                <TiTickOutline />
+                <p>Geo Location Mapping</p>
+              </li>
+              <li className="text-tertiary-dark items-center flex hover:text-BrandSecondary-dark dark:text-BrandFancy-light">
+                <TiTickOutline />
+                <p>Photography</p>
+              </li>
+            </ul>
           </div>
           <div className="w-full flex flex-col">
             <article className="font-edu text-md">

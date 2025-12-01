@@ -1,0 +1,104 @@
+import { Callout } from '@/components/common/Callout'
+import { CodeBlock } from '@/components/common/CodeBlock'
+import { TwoColumnLayout } from '@/components/common/TwoColumnLayout'
+import { FirstParagraph } from '@/components/common/FirstParagraph'
+import { ImageWithCaption } from '@/components/common/ImageWithCaption'
+import { BlogParagraph } from "@/components/common/BlogParagraph";
+
+# Advanced MDX Styling Guide
+
+<FirstParagraph>
+Welcome to this advanced guide on styling MDX posts. This first paragraph has special styling with a large drop cap and enhanced typography.
+</FirstParagraph>
+
+<BlogParagraph>
+Now we're back to regular paragraphs. You can continue writing normally and everything will flow naturally.
+
+## This Heading Has Border Lines
+
+Notice how this h2 heading has beautiful border lines on top and bottom? That's configured in `mdx-components.tsx`!
+
+<Callout type="info" title="Pro Tip">
+  You can customize any HTML element that MDX generates by overriding it in the components object.
+</Callout>
+
+## Adding Images
+
+### Simple Image
+You can add images directly in markdown:
+
+![Next.js Logo](https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=800&h=400&fit=crop)
+
+### Image with Caption
+
+<ImageWithCaption 
+  src="/assets/blog/blog7.jpg"
+  alt="Beautiful landscape"
+  caption="A stunning view of the mountains at sunset"
+/>
+
+## Two Column Layout
+
+<TwoColumnLayout>
+  <div>
+    ### Left Column
+    This content appears in the left column. You can put any markdown or components here.
+    
+    - Point one
+    - Point two
+    - Point three
+  </div>
+  
+  <div>
+    ### Right Column
+    This content appears in the right column. It's perfect for comparisons or side-by-side content.
+    
+    <Callout type="success">
+      This works great for showcasing features!
+    </Callout>
+  </div>
+</TwoColumnLayout>
+
+## Code Examples
+
+<CodeBlock title="example.tsx" language="TypeScript">
+```typescript
+interface User {
+  name: string
+  email: string
+}
+
+const user: User = {
+  name: 'John Doe',
+  email: 'john@example.com'
+}
+```
+</CodeBlock>
+
+## Different Callout Types
+
+<Callout type="info" title="Information">
+  This is an informational callout.
+</Callout>
+
+<Callout type="warning" title="Warning">
+  This is a warning callout.
+</Callout>
+
+<Callout type="success" title="Success">
+  This is a success callout.
+</Callout>
+
+<Callout type="error" title="Error">
+  This is an error callout.
+</Callout>
+
+## Blockquotes
+
+> This is a beautifully styled blockquote with custom background and border styling.
+
+## Final Thoughts
+
+With these components, you have complete control over your blog styling while keeping the simplicity of markdown!
+
+</BlogParagraph>

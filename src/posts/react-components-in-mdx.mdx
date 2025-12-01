@@ -1,0 +1,80 @@
+import { Callout } from '@/components/common/Callout'
+import { CodeBlock } from '@/components/common/CodeBlock'
+import { BlogParagraph } from "@/components/common/BlogParagraph";
+
+# Using React Components in MDX
+
+<BlogParagraph>
+
+One of the most powerful features of MDX is the ability to use React components directly in your markdown!
+
+<Callout type="info" title="Pro Tip">
+  You can import and use any React component in your MDX files. This makes your content interactive and engaging!
+</Callout>
+
+## Custom Components
+
+Here's an example of different callout types:
+
+<Callout type="success" title="Success!">
+  Your MDX setup is working perfectly! 🎉
+</Callout>
+
+<Callout type="warning" title="Warning">
+  Make sure to restart your dev server after creating new MDX files.
+</Callout>
+
+<Callout type="error" title="Error">
+  This is what an error callout looks like. Use it to highlight critical information.
+</Callout>
+
+## Code Blocks with Titles
+
+<CodeBlock title="example.ts" language="TypeScript">
+```typescript
+interface User {
+  name: string
+  email: string
+}
+
+const user: User = {
+  name: 'John Doe',
+  email: 'john@example.com'
+}
+```
+</CodeBlock>
+
+## Why This is Awesome
+
+1. **Interactive Content** - Add buttons, forms, or any React component
+2. **Consistent Styling** - Use your design system components
+3. **Type Safety** - Full TypeScript support for your components
+4. **Reusability** - Write once, use everywhere
+
+<Callout type="info">
+  You can even nest components! This callout is inside a list item.
+</Callout>
+
+## Traditional Markdown Still Works
+
+Of course, all your favorite markdown features still work:
+
+- **Bold text**
+- *Italic text*
+- `Inline code`
+- [Links](https://nextjs.org)
+
+### Tables Too!
+
+| Feature | Supported |
+|---------|-----------|
+| Markdown | ✅ |
+| React Components | ✅ |
+| TypeScript | ✅ |
+| Tailwind CSS | ✅ |
+
+---
+
+Happy blogging with MDX! 🚀
+
+</BlogParagraph>
