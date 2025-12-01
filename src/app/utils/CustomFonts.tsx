@@ -16,7 +16,8 @@ export const FontNanumMyeongjo = localFont({
         path: "../../../public/fonts/Nanum_Myeongjo/NanumMyeongjo-Regular.ttf",
         weight: "400",
         style: "normal"
-      }
+      },
+   
     ],
     variable: "--font-Nanum_Myeongjo"
   })
@@ -67,6 +68,16 @@ export const FontAnton = localFont({
   variable: "--font-anton"
 })
 
+export const FontMomo = localFont({
+  src: [
+       {
+        path: "../../../public/fonts/Momo_Signature/MomoSignature-Regular.ttf",
+        weight: "400",
+        style: "normal",
+      }
+  ],
+  variable: "--font-momo"
+})
 export const FontEdu = localFont({
   src: [
     {
