@@ -6,6 +6,8 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/mdx-components.tsx",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -14,6 +16,7 @@ export default {
   			nanumMyeongjo: ["var(--font-Nanum_Myeongjo)"],
         anton: ["var(--font-anton)"],
         edu: ["var(--font-edu)"],
+        momo: ["var(--font-momo)"],
   		
       },
       colors: {
@@ -118,5 +121,7 @@ export default {
       }  
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 } satisfies Config;
